@@ -1,22 +1,33 @@
-package CPAN::Mini::Devel::Recent;
+# 
+# This file is part of CPAN-Mini-Devel-Recent
+# 
+# This software is Copyright (c) 2010 by David Golden.
+# 
+# This is free software, licensed under:
+# 
+#   The Apache License, Version 2.0, January 2004
+# 
 use 5.006;
 use strict;
 use warnings;
-our $VERSION = '0.01';
-$VERSION = eval $VERSION; ## no critic
+package CPAN::Mini::Devel::Recent;
+BEGIN {
+  $CPAN::Mini::Devel::Recent::VERSION = '0.05';
+}
+# ABSTRACT: Create CPAN::Mini mirror with recent developer releases
 
 use Config;
-use CPAN::Mini;
-use CPAN ();
+use CPAN::Mini 0.567;
+use CPAN 1.92 ();
 use CPAN::Tarzip;
 use CPAN::HandleConfig;
 use File::Temp 0.20;
-use File::Spec;
+use File::Spec 3.27;
 use File::Path ();
 use File::Basename qw/basename/;
-use YAML::Syck 'LoadFile';
+use YAML::Syck 1.07 qw/LoadFile/;
 
-our @ISA = 'CPAN::Mini';
+our @ISA = qw/CPAN::Mini/;
 
 #--------------------------------------------------------------------------#
 # globals
@@ -284,33 +295,29 @@ sub _parse_module_index {
 
 1; #modules must return true
 
-__END__
 
-#--------------------------------------------------------------------------#
-# pod documentation 
-#--------------------------------------------------------------------------#
 
-=begin wikidoc
+=pod
 
-= NAME
+=head1 NAME
 
 CPAN::Mini::Devel::Recent - Create CPAN::Mini mirror with recent developer releases
 
-= VERSION
+=head1 VERSION
 
-This documentation describes version %%VERSION%%.
+version 0.05
 
-= SYNOPSIS
+=head1 SYNOPSIS
 
-    $ minicpan -c CPAN::Mini::Devel::Recent
+     $ minicpan -c CPAN::Mini::Devel::Recent
 
-= DESCRIPTION
+=head1 DESCRIPTION
 
-CPAN::Mini::Devel::Recent is similar to [CPAN::Mini::Devel], except it
-uses the new, experimental {RECENT-*} index files on CPAN, which are updated
-more frequently than the {indices/find-ls.gz} file that CPAN::Mini::Devel uses.
+CPAN::Mini::Devel::Recent is similar to L<CPAN::Mini::Devel>, except it
+uses the new, experimental C<<< RECENT-* >>> index files on CPAN, which are updated
+more frequently than the C<<< indices/find-ls.gz >>> file that CPAN::Mini::Devel uses.
 
-Normally, [CPAN::Mini] creates a minimal CPAN mirror with the latest version of
+Normally, L<CPAN::Mini> creates a minimal CPAN mirror with the latest version of
 each distribution, but excluding developer releases (those with an underscore
 in the version number, like 0.10_01).
 
@@ -326,47 +333,49 @@ name already in the normal CPAN packages list.
 There may be errors retrieving very new modules if they are indexed but not
 yet synchronized on the mirror.
 
-= USAGE
+=for Pod::Coverage DEBUG
 
-See [CPAN::Mini].
+=head1 USAGE
 
-= BUGS
+See L<CPAN::Mini>.
+
+=head1 BUGS
 
 Please report any bugs or feature using the CPAN Request Tracker.  
 Bugs can be submitted through the web interface at 
-[http://rt.cpan.org/Dist/Display.html?Queue=CPAN-Mini-Devel-Recent]
+L<http://rt.cpan.org/Dist/Display.html?Queue=CPAN-Mini-Devel-Recent>
 
 When submitting a bug or request, please include a test-file or a patch to an
 existing test-file that illustrates the bug or desired feature.
 
-= SEE ALSO
+=head1 SEE ALSO
 
-* [CPAN::Mini]
-* [CPAN::Mini::Devel]
+=over
 
-= AUTHOR
+=item *
 
-David A. Golden (DAGOLDEN)
+L<CPAN::Mini>
 
-= COPYRIGHT AND LICENSE
+=item *
 
-Copyright (c) 2009 by David A. Golden
+L<CPAN::Mini::Devel>
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-[http://www.apache.org/licenses/LICENSE-2.0]
+=back
 
-Files produced as output though the use of this software, shall not be
-considered Derivative Works, but shall be considered the original work of the
-Licensor.
+=head1 AUTHOR
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+  David Golden <dagolden@cpan.org>
 
-=end wikidoc
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2010 by David Golden.
+
+This is free software, licensed under:
+
+  The Apache License, Version 2.0, January 2004
 
 =cut
+
+
+__END__
+
