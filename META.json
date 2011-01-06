@@ -1,0 +1,72 @@
+{
+   "abstract" : "Create CPAN::Mini mirror with recent developer releases",
+   "author" : [
+      "David Golden <dagolden@cpan.org>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Dist::Zilla version 4.200001, CPAN::Meta::Converter version 2.102400",
+   "license" : [
+      "apache_2_0"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "CPAN-Mini-Devel-Recent",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "xt",
+         "examples",
+         "corpus"
+      ],
+      "package" : [
+         "DB"
+      ]
+   },
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.31"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "CPAN" : "1.92",
+            "CPAN::HandleConfig" : 0,
+            "CPAN::Mini" : "0.567",
+            "CPAN::Tarzip" : 0,
+            "Config" : 0,
+            "File::Basename" : 0,
+            "File::Path" : 0,
+            "File::Spec" : "3.27",
+            "File::Temp" : "0.20",
+            "YAML::Syck" : "1.07",
+            "perl" : "5.006"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "File::Find" : 0,
+            "Test::More" : 0
+         }
+      }
+   },
+   "provides" : {
+      "CPAN::Mini::Devel::Recent" : {
+         "file" : "lib/CPAN/Mini/Devel/Recent.pm",
+         "version" : "0.06"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "homepage" : "http://github.com/dagolden/cpan-mini-devel-recent/tree",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/dagolden/cpan-mini-devel-recent.git",
+         "web" : "http://github.com/dagolden/cpan-mini-devel-recent/tree"
+      }
+   },
+   "version" : "0.06"
+}
+

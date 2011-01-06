@@ -13,7 +13,7 @@ my %WriteMakefileArgs = (
   'AUTHOR' => 'David Golden <dagolden@cpan.org>',
   'BUILD_REQUIRES' => {
     'File::Find' => '0',
-    'Test::More' => '0.62'
+    'Test::More' => '0'
   },
   'CONFIGURE_REQUIRES' => {
     'ExtUtils::MakeMaker' => '6.31'
@@ -34,7 +34,7 @@ my %WriteMakefileArgs = (
     'File::Temp' => '0.20',
     'YAML::Syck' => '1.07'
   },
-  'VERSION' => '0.05',
+  'VERSION' => '0.06',
   'test' => {
     'TESTS' => 't/*.t'
   }

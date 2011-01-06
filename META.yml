@@ -4,11 +4,11 @@ author:
   - 'David Golden <dagolden@cpan.org>'
 build_requires:
   File::Find: 0
-  Test::More: 0.62
+  Test::More: 0
 configure_requires:
   ExtUtils::MakeMaker: 6.31
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.101900, CPAN::Meta::Converter version 2.101670'
+generated_by: 'Dist::Zilla version 4.200001, CPAN::Meta::Converter version 2.102400'
 license: apache
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -20,10 +20,12 @@ no_index:
     - xt
     - examples
     - corpus
+  package:
+    - DB
 provides:
   CPAN::Mini::Devel::Recent:
     file: lib/CPAN/Mini/Devel/Recent.pm
-    version: 0.05
+    version: 0.06
 requires:
   CPAN: 1.92
   CPAN::HandleConfig: 0
@@ -37,5 +39,6 @@ requires:
   YAML::Syck: 1.07
   perl: 5.006
 resources:
-  repository: http://github.com/dagolden/cpan-mini-devel-recent
-version: 0.05
+  homepage: http://github.com/dagolden/cpan-mini-devel-recent/tree
+  repository: git://github.com/dagolden/cpan-mini-devel-recent.git
+version: 0.06

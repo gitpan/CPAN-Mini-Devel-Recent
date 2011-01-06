@@ -1,18 +1,18 @@
-# 
+#
 # This file is part of CPAN-Mini-Devel-Recent
-# 
-# This software is Copyright (c) 2010 by David Golden.
-# 
+#
+# This software is Copyright (c) 2011 by David Golden.
+#
 # This is free software, licensed under:
-# 
+#
 #   The Apache License, Version 2.0, January 2004
-# 
+#
 use 5.006;
 use strict;
 use warnings;
 package CPAN::Mini::Devel::Recent;
 BEGIN {
-  $CPAN::Mini::Devel::Recent::VERSION = '0.05';
+  $CPAN::Mini::Devel::Recent::VERSION = '0.06';
 }
 # ABSTRACT: Create CPAN::Mini mirror with recent developer releases
 
@@ -305,7 +305,7 @@ CPAN::Mini::Devel::Recent - Create CPAN::Mini mirror with recent developer relea
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SYNOPSIS
 
@@ -364,11 +364,11 @@ L<CPAN::Mini::Devel>
 
 =head1 AUTHOR
 
-  David Golden <dagolden@cpan.org>
+David Golden <dagolden@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2010 by David Golden.
+This software is Copyright (c) 2011 by David Golden.
 
 This is free software, licensed under:
 

@@ -3,7 +3,7 @@ NAME
     developer releases
 
 VERSION
-    version 0.05
+    version 0.06
 
 SYNOPSIS
          $ minicpan -c CPAN::Mini::Devel::Recent
@@ -47,10 +47,10 @@ SEE ALSO
     *   CPAN::Mini::Devel
 
 AUTHOR
-      David Golden <dagolden@cpan.org>
+    David Golden <dagolden@cpan.org>
 
 COPYRIGHT AND LICENSE
-    This software is Copyright (c) 2010 by David Golden.
+    This software is Copyright (c) 2011 by David Golden.
 
     This is free software, licensed under:
 
